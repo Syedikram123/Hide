@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gang vs Tanisha</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>🐍 Gang vs Tanisha 🏃‍♀️</h1>
+
   <canvas id="gameCanvas" width="400" height="400"></canvas>
-  <p>Swipe (📱) or use Arrow Keys (💻) to move Gang!</p>
+
+  <!-- MOBILE-ONLY CONTROLS -->
+  <div id="controls">
+    <button onclick="setDirection(0, -1)">⬆️</button><br />
+    <button onclick="setDirection(-1, 0)">⬅️</button>
+    <button onclick="setDirection(1, 0)">➡️</button><br />
+    <button onclick="setDirection(0, 1)">⬇️</button>
+  </div>
+
+  <p id="scoreDisplay">Score: 0</p>
   <script src="script.js"></script>
 </body>
 </html>

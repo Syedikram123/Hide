@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 0;
   background-color: #111;
   color: white;
   font-family: sans-serif;
@@ -8,12 +7,41 @@ body {
 }
 
 h1 {
-  margin-top: 10px;
+  margin: 10px 0;
+  font-size: 24px;
 }
 
 canvas {
   background-color: #222;
   border: 3px solid #fff;
+  margin-top: 10px;
+  touch-action: none;
+}
+
+/* MOBILE CONTROLS */
+#controls {
   margin-top: 20px;
-  touch-action: none; /* Allow swipe on mobile */
+  display: none;
+}
+
+#controls button {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 24px;
+  background-color: #333;
+  color: white;
+  border: 2px solid white;
+  border-radius: 12px;
+}
+
+#controls button:active {
+  background-color: #555;
+}
+
+/* Show controls only on small screens (mobile) */
+@media (max-width: 768px) {
+  #controls {
+    display: block;
+  }
 }
